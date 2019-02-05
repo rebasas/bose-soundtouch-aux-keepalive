@@ -1,7 +1,7 @@
 #!/bin/bash
 PATH=$PATH:/opt/bin:/usr/bin/:/opt/bin/bash
 
-soundtouch_ip=192.168.0.42
+soundtouch_ip=192.168.1.7
 source=$(curl -s http://$soundtouch_ip:8090/now_playing | xmllint --xpath 'string(/nowPlaying/@source)' -)
 
 if [ $source = "AUX" ]
